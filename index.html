@@ -1,249 +1,455 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Quinns Confectionaries - freshly baked cakes, cupcakes and pastries made for every celebration.">
-  <title>Quinns Confectionaries | Cakes Made for Every Moment</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="announcement-bar">
-    <p>Freshly baked with love · Same-day orders available on selected cakes</p>
-    <button class="announcement-close" aria-label="Close announcement">&times;</button>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Quinns Confectionaries - freshly baked cakes, cupcakes and pastries made for every celebration."
+    />
+    <title>Quinn's Confectioneries | Cakes Made for Every Moment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="announcement-bar">
+      <p>
+        Freshly baked with love · Same-day orders available on selected cakes
+      </p>
+      <button class="announcement-close" aria-label="Close announcement">
+        &times;
+      </button>
+    </div>
 
-  <header class="site-header" id="top">
-    <div class="container nav-wrap">
-      <a href="#top" class="brand" aria-label="Quinns Confectionaries home">
-        <span class="brand-mark">Q</span>
-        <span class="brand-text">Quinns <strong>Confectionaries</strong></span>
-      </a>
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a href="#top" class="brand" aria-label="Quinns Confectionaries home">
+          <span class="brand-mark">Q</span>
+          <span class="brand-text"
+            >Quinn's <strong>Confectioneries</strong></span
+          >
+        </a>
 
-      <nav class="desktop-nav" aria-label="Main navigation">
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="#top">Home</a>
+          <a href="#categories">Categories</a>
+          <a href="#shop">Shop</a>
+          <a id="customCakeBtn">Custom Cakes</a>
+          <a href="#about">About</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="icon-btn" id="searchBtn" aria-label="Open search">
+            ⌕
+          </button>
+          <button class="cart-btn" id="cartBtn" aria-label="Open shopping cart">
+            <span class="cart-icon">🛒</span>
+            <span>Cart</span>
+            <span class="cart-count" id="cartCount">0</span>
+          </button>
+          <button
+            class="menu-btn"
+            id="menuBtn"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="search-panel" id="searchPanel">
+        <div class="container search-inner">
+          <label for="searchInput">Search our cakes</label>
+          <div class="search-field">
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Try “Chocolate”, “Birthday” or “Cupcake”"
+            />
+            <button id="clearSearch" type="button">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
         <a href="#top">Home</a>
         <a href="#categories">Categories</a>
         <a href="#shop">Shop</a>
         <a href="#custom">Custom Cakes</a>
         <a href="#about">About</a>
       </nav>
+    </header>
 
-      <div class="nav-actions">
-        <button class="icon-btn" id="searchBtn" aria-label="Open search">⌕</button>
-        <button class="cart-btn" id="cartBtn" aria-label="Open shopping cart">
-          <span class="cart-icon">🛒</span>
-          <span>Cart</span>
-          <span class="cart-count" id="cartCount">0</span>
-        </button>
-        <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-
-    <div class="search-panel" id="searchPanel">
-      <div class="container search-inner">
-        <label for="searchInput">Search our cakes</label>
-        <div class="search-field">
-          <input id="searchInput" type="search" placeholder="Try “Chocolate”, “Birthday” or “Cupcake”">
-          <button id="clearSearch" type="button">Clear</button>
-        </div>
-      </div>
-    </div>
-
-    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
-      <a href="#top">Home</a>
-      <a href="#categories">Categories</a>
-      <a href="#shop">Shop</a>
-      <a href="#custom">Custom Cakes</a>
-      <a href="#about">About</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">BAKED FOR YOUR MOMENTS</span>
-          <h1>Beautiful cakes.<br><em>Sweet memories.</em></h1>
-          <p>From intimate birthdays to big celebrations, Quinns Confectionaries creates fresh, delicious cakes that make every moment feel special.</p>
-          <div class="hero-actions">
-            <a href="#shop" class="btn btn-primary">Shop cakes <span>→</span></a>
-            <a href="#custom" class="btn btn-outline">Order a custom cake</a>
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <!-- <span class="eyebrow">CAKES YOU KEEP COMING BACK TO.</span> -->
+            <h1>Cakes you keep.<br /><em>Coming back to.</em></h1>
+            <p>
+              You shouldn’t have to wonder if your cake will taste as good as it
+              looks. We make cakes with a taste you can count on. Cakes you keep
+              coming back to, whether you’re treating yourself or making someone
+              else feel special.
+            </p>
+            <div class="hero-actions">
+              <a href="#shop" class="btn btn-primary"
+                >Shop cakes <span>→</span></a
+              >
+              <a href="#custom" class="btn btn-outline">Order a custom cake</a>
+            </div>
+            <div class="hero-trust">
+              <span>★ 4.9/5 customer rating</span>
+              <span>•</span>
+              <span>Freshly baked</span>
+            </div>
           </div>
-          <div class="hero-trust">
-            <span>★ 4.9/5 customer rating</span>
-            <span>•</span>
-            <span>Freshly baked</span>
+          <div class="hero-visual">
+            <div class="hero-badge">
+              <strong>10+</strong><span>years of<br />baking joy</span>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1000&q=85"
+              alt="Decorated chocolate cake"
+            />
+            <div class="hero-caption">
+              <span>Quinns signature</span>
+              <strong>Chocolate Celebration Cake</strong>
+            </div>
           </div>
         </div>
-        <div class="hero-visual">
-          <div class="hero-badge"><strong>10+</strong><span>years of<br>baking joy</span></div>
-          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1000&q=85" alt="Decorated chocolate cake">
-          <div class="hero-caption">
-            <span>Quinns signature</span>
-            <strong>Chocolate Celebration Cake</strong>
+      </section>
+
+      <section class="categories section" id="categories">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">FIND YOUR FAVORITE</span>
+              <h2>Shop by category</h2>
+            </div>
+            <p>Something delicious for every kind of celebration.</p>
+          </div>
+          <div class="category-grid">
+            <button class="category-card" data-category="Birthday Cakes">
+              <img
+                src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=700&q=85"
+                alt="Birthday cake"
+              />
+              <span>Birthday Cakes</span><small>Celebrate in style →</small>
+            </button>
+            <button class="category-card" data-category="Wedding Cakes">
+              <img
+                src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=700&q=85"
+                alt="Elegant wedding cake"
+              />
+              <span>Wedding Cakes</span><small>Made for forever →</small>
+            </button>
+            <button class="category-card" data-category="Cupcakes">
+              <img
+                src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=700&q=85"
+                alt="Cupcakes"
+              />
+              <span>Cupcakes</span><small>Little bites of joy →</small>
+            </button>
+            <button class="category-card" data-category="Pastries">
+              <img
+                src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=85"
+                alt="Fresh pastries"
+              />
+              <span>Pastries</span><small>Fresh from the oven →</small>
+            </button>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="categories section" id="categories">
-      <div class="container">
-        <div class="section-heading">
+      <section class="shop section" id="shop">
+        <div class="container">
+          <div class="section-heading shop-heading">
+            <div>
+              <span class="eyebrow">THE QUINNS COLLECTION</span>
+              <h2>Customer favorites</h2>
+            </div>
+            <div class="filters" id="filters">
+              <button class="filter active" data-filter="All">All</button>
+              <button class="filter" data-filter="Birthday Cakes">
+                Birthday
+              </button>
+              <button class="filter" data-filter="Wedding Cakes">
+                Wedding
+              </button>
+              <button class="filter" data-filter="Cupcakes">Cupcakes</button>
+              <button class="filter" data-filter="Pastries">Pastries</button>
+            </div>
+          </div>
+          <div class="product-grid" id="productGrid"></div>
+          <p class="empty-products" id="emptyProducts" hidden>
+            No cakes match your search. Try another name or category.
+          </p>
+        </div>
+      </section>
+
+      <section class="offer-section section-sm">
+        <div class="container offer-card">
           <div>
-            <span class="eyebrow">FIND YOUR FAVORITE</span>
-            <h2>Shop by category</h2>
+            <span class="eyebrow">THIS WEEK AT QUINNS</span>
+            <h2>Make the table a little sweeter.</h2>
+            <p>
+              Get 10% off when you order any two selected celebration cakes this
+              week.
+            </p>
           </div>
-          <p>Something delicious for every kind of celebration.</p>
+          <a href="#shop" class="btn btn-light"
+            >Shop the offer <span>→</span></a
+          >
         </div>
-        <div class="category-grid">
-          <button class="category-card" data-category="Birthday Cakes">
-            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=700&q=85" alt="Birthday cake">
-            <span>Birthday Cakes</span><small>Celebrate in style →</small>
-          </button>
-          <button class="category-card" data-category="Wedding Cakes">
-            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=700&q=85" alt="Elegant wedding cake">
-            <span>Wedding Cakes</span><small>Made for forever →</small>
-          </button>
-          <button class="category-card" data-category="Cupcakes">
-            <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=700&q=85" alt="Cupcakes">
-            <span>Cupcakes</span><small>Little bites of joy →</small>
-          </button>
-          <button class="category-card" data-category="Pastries">
-            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=85" alt="Fresh pastries">
-            <span>Pastries</span><small>Fresh from the oven →</small>
-          </button>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="shop section" id="shop">
-      <div class="container">
-        <div class="section-heading shop-heading">
+      <section class="why section" id="about">
+        <div class="container why-grid">
+          <div class="why-image">
+            <img
+              src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?auto=format&fit=crop&w=1000&q=85"
+              alt="Baker preparing a cake"
+            />
+          </div>
+          <div class="why-copy">
+            <span class="eyebrow">WHY QUINNS</span>
+            <h2>Made with care, from our kitchen to your table.</h2>
+            <p>
+              We believe a good cake should taste as beautiful as it looks.
+              Every Quinns order is prepared with carefully selected
+              ingredients, thoughtful decoration and plenty of attention to
+              detail.
+            </p>
+            <div class="feature-list">
+              <div class="feature">
+                <span>01</span>
+                <div>
+                  <h3>Freshly baked</h3>
+                  <p>We bake with freshness and flavor in mind.</p>
+                </div>
+              </div>
+              <div class="feature">
+                <span>02</span>
+                <div>
+                  <h3>Made for you</h3>
+                  <p>Choose a favorite or create something personal.</p>
+                </div>
+              </div>
+              <div class="feature">
+                <span>03</span>
+                <div>
+                  <h3>Reliable delivery</h3>
+                  <p>Your order is prepared and packed with care.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="custom section" id="custom">
+        <div class="container custom-card">
+          <div class="custom-copy">
+            <span class="eyebrow">YOUR IDEA. OUR KITCHEN.</span>
+            <h2>Have something special in mind?</h2>
+            <p>
+              Tell us what you are celebrating, your preferred flavor, colors,
+              size and design. We will help turn your idea into a cake worth
+              remembering.
+            </p>
+            <a href="#contact" class="btn btn-primary"
+              >Start a custom order <span>→</span></a
+            >
+          </div>
+          <div class="custom-image">
+            <img
+              src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&w=900&q=85"
+              alt="Custom decorated cake"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews section">
+        <div class="container">
+          <div class="section-heading centered">
+            <span class="eyebrow">FROM OUR CUSTOMERS</span>
+            <h2>Sweet words from happy tables.</h2>
+          </div>
+          <div class="review-grid">
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                “The cake looked amazing and tasted even better. Everyone at the
+                party kept asking where it came from.”
+              </p>
+              <strong>Amaka O.</strong><span>Birthday order</span>
+            </article>
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                “Quinns understood exactly what I wanted for my sister's
+                celebration. The finishing was beautiful.”
+              </p>
+              <strong>Daniel C.</strong><span>Custom cake</span>
+            </article>
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                “Fresh, soft and delivered exactly when promised. I will
+                definitely order again.”
+              </p>
+              <strong>Chioma E.</strong><span>Celebration cake</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter section-sm" id="contact">
+        <div class="container newsletter-card">
           <div>
-            <span class="eyebrow">THE QUINNS COLLECTION</span>
-            <h2>Customer favorites</h2>
+            <span class="eyebrow">STAY IN THE LOOP</span>
+            <h2>Get the sweet updates.</h2>
+            <p>
+              New cakes, seasonal offers and celebration ideas delivered to your
+              inbox.
+            </p>
           </div>
-          <div class="filters" id="filters">
-            <button class="filter active" data-filter="All">All</button>
-            <button class="filter" data-filter="Birthday Cakes">Birthday</button>
-            <button class="filter" data-filter="Wedding Cakes">Wedding</button>
-            <button class="filter" data-filter="Cupcakes">Cupcakes</button>
-            <button class="filter" data-filter="Pastries">Pastries</button>
-          </div>
+          <form id="newsletterForm" class="newsletter-form">
+            <input
+              type="email"
+              id="newsletterEmail"
+              placeholder="Your email address"
+              required
+            /><button class="btn btn-dark" type="submit">Subscribe</button>
+          </form>
         </div>
-        <div class="product-grid" id="productGrid"></div>
-        <p class="empty-products" id="emptyProducts" hidden>No cakes match your search. Try another name or category.</p>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <section class="offer-section section-sm">
-      <div class="container offer-card">
+    <footer class="site-footer">
+      <div class="container footer-grid">
         <div>
-          <span class="eyebrow">THIS WEEK AT QUINNS</span>
-          <h2>Make the table a little sweeter.</h2>
-          <p>Get 10% off when you order any two selected celebration cakes this week.</p>
+          <a href="#top" class="brand footer-brand"
+            ><span class="brand-mark">Q</span
+            ><span class="brand-text"
+              >Quinns <strong>Confectionaries</strong></span
+            ></a
+          >
+          <p>Beautiful cakes and sweet treats made for your special moments.</p>
         </div>
-        <a href="#shop" class="btn btn-light">Shop the offer <span>→</span></a>
+        <div>
+          <h3>Explore</h3>
+          <a href="#shop">Shop cakes</a><a href="#categories">Categories</a
+          ><a href="#custom">Custom orders</a>
+        </div>
+        <div>
+          <h3>Help</h3>
+          <a href="#contact">Contact us</a><a href="#shop">Delivery</a
+          ><a href="#shop">FAQs</a>
+        </div>
+        <div>
+          <h3>Follow us</h3>
+          <a href="#">Instagram</a><a href="#">Facebook</a
+          ><a href="#">TikTok</a>
+        </div>
       </div>
-    </section>
+      <div class="container footer-bottom">
+        <span
+          >© <span id="year"></span> Quinns Confectionaries. All rights
+          reserved.</span
+        ><span>Made with love & cake.</span>
+      </div>
+    </footer>
 
-    <section class="why section" id="about">
-      <div class="container why-grid">
-        <div class="why-image">
-          <img src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?auto=format&fit=crop&w=1000&q=85" alt="Baker preparing a cake">
+    <div class="overlay" id="overlay"></div>
+    <aside
+      class="cart-drawer"
+      id="cartDrawer"
+      aria-label="Shopping cart"
+      aria-hidden="true"
+    >
+      <div class="cart-header">
+        <div>
+          <span class="eyebrow">YOUR ORDER</span>
+          <h2>Your cart</h2>
         </div>
-        <div class="why-copy">
-          <span class="eyebrow">WHY QUINNS</span>
-          <h2>Made with care, from our kitchen to your table.</h2>
-          <p>We believe a good cake should taste as beautiful as it looks. Every Quinns order is prepared with carefully selected ingredients, thoughtful decoration and plenty of attention to detail.</p>
-          <div class="feature-list">
-            <div class="feature"><span>01</span><div><h3>Freshly baked</h3><p>We bake with freshness and flavor in mind.</p></div></div>
-            <div class="feature"><span>02</span><div><h3>Made for you</h3><p>Choose a favorite or create something personal.</p></div></div>
-            <div class="feature"><span>03</span><div><h3>Reliable delivery</h3><p>Your order is prepared and packed with care.</p></div></div>
+        <button class="close-btn" id="closeCart" aria-label="Close cart">
+          &times;
+        </button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-empty" id="cartEmpty">
+        <div class="empty-icon">🧁</div>
+        <h3>Your cart is empty</h3>
+        <p>Add a cake and it will appear here.</p>
+        <button class="btn btn-primary" id="startShopping">
+          Start shopping
+        </button>
+      </div>
+      <div class="cart-footer" id="cartFooter">
+        <div class="cart-total">
+          <span>Total</span><strong id="cartTotal">₦0</strong>
+        </div>
+        <button class="btn btn-primary checkout-btn" id="checkoutBtn">
+          Proceed to checkout <span>→</span>
+        </button>
+        <small>Prices shown in Nigerian Naira.</small>
+      </div>
+    </aside>
+
+    <div class="checkout-modal" id="checkoutModal" aria-hidden="true">
+      <div class="checkout-box">
+        <button
+          class="close-btn"
+          id="closeCheckout"
+          aria-label="Close checkout"
+        >
+          &times;
+        </button>
+        <span class="eyebrow">CHECKOUT</span>
+        <h2 class="word">Complete your order</h2>
+        <form id="checkoutForm">
+          <div class="form-grid">
+            <label>Full name<input type="text" name="name" required /></label
+            ><label
+              >Phone number<input type="tel" name="phone" required
+            /></label>
           </div>
-        </div>
+          <label
+            >Email address<input type="email" name="email" required
+          /></label>
+          <label
+            >Delivery address<textarea
+              name="address"
+              rows="3"
+              required
+            ></textarea>
+          </label>
+          <label
+            >Order note <span>(optional)</span
+            ><textarea
+              name="note"
+              rows="2"
+              placeholder="Cake message, delivery instructions, etc."
+            ></textarea>
+          </label>
+          <div class="checkout-summary">
+            <span>Order total</span><strong id="checkoutTotal">₦0</strong>
+          </div>
+          <button class="btn btn-dark full" type="submit">Place order</button>
+        </form>
       </div>
-    </section>
-
-    <section class="custom section" id="custom">
-      <div class="container custom-card">
-        <div class="custom-copy">
-          <span class="eyebrow">YOUR IDEA. OUR KITCHEN.</span>
-          <h2>Have something special in mind?</h2>
-          <p>Tell us what you are celebrating, your preferred flavor, colors, size and design. We will help turn your idea into a cake worth remembering.</p>
-          <a href="#contact" class="btn btn-primary">Start a custom order <span>→</span></a>
-        </div>
-        <div class="custom-image">
-          <img src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&w=900&q=85" alt="Custom decorated cake">
-        </div>
-      </div>
-    </section>
-
-    <section class="reviews section">
-      <div class="container">
-        <div class="section-heading centered">
-          <span class="eyebrow">FROM OUR CUSTOMERS</span>
-          <h2>Sweet words from happy tables.</h2>
-        </div>
-        <div class="review-grid">
-          <article class="review-card"><div class="stars">★★★★★</div><p>“The cake looked amazing and tasted even better. Everyone at the party kept asking where it came from.”</p><strong>Amaka O.</strong><span>Birthday order</span></article>
-          <article class="review-card"><div class="stars">★★★★★</div><p>“Quinns understood exactly what I wanted for my sister's celebration. The finishing was beautiful.”</p><strong>Daniel C.</strong><span>Custom cake</span></article>
-          <article class="review-card"><div class="stars">★★★★★</div><p>“Fresh, soft and delivered exactly when promised. I will definitely order again.”</p><strong>Chioma E.</strong><span>Celebration cake</span></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="newsletter section-sm" id="contact">
-      <div class="container newsletter-card">
-        <div><span class="eyebrow">STAY IN THE LOOP</span><h2>Get the sweet updates.</h2><p>New cakes, seasonal offers and celebration ideas delivered to your inbox.</p></div>
-        <form id="newsletterForm" class="newsletter-form"><input type="email" id="newsletterEmail" placeholder="Your email address" required><button class="btn btn-dark" type="submit">Subscribe</button></form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div><a href="#top" class="brand footer-brand"><span class="brand-mark">Q</span><span class="brand-text">Quinns <strong>Confectionaries</strong></span></a><p>Beautiful cakes and sweet treats made for your special moments.</p></div>
-      <div><h3>Explore</h3><a href="#shop">Shop cakes</a><a href="#categories">Categories</a><a href="#custom">Custom orders</a></div>
-      <div><h3>Help</h3><a href="#contact">Contact us</a><a href="#shop">Delivery</a><a href="#shop">FAQs</a></div>
-      <div><h3>Follow us</h3><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a></div>
     </div>
-    <div class="container footer-bottom"><span>© <span id="year"></span> Quinns Confectionaries. All rights reserved.</span><span>Made with love & cake.</span></div>
-  </footer>
 
-  <div class="overlay" id="overlay"></div>
-  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
-    <div class="cart-header"><div><span class="eyebrow">YOUR ORDER</span><h2>Your cart</h2></div><button class="close-btn" id="closeCart" aria-label="Close cart">&times;</button></div>
-    <div class="cart-items" id="cartItems"></div>
-    <div class="cart-empty" id="cartEmpty"><div class="empty-icon">🧁</div><h3>Your cart is empty</h3><p>Add a cake and it will appear here.</p><button class="btn btn-primary" id="startShopping">Start shopping</button></div>
-    <div class="cart-footer" id="cartFooter">
-      <div class="cart-total"><span>Total</span><strong id="cartTotal">₦0</strong></div>
-      <button class="btn btn-primary checkout-btn" id="checkoutBtn">Proceed to checkout <span>→</span></button>
-      <small>Prices shown in Nigerian Naira.</small>
-    </div>
-  </aside>
-
-  <div class="checkout-modal" id="checkoutModal" aria-hidden="true">
-    <div class="checkout-box">
-      <button class="close-btn" id="closeCheckout" aria-label="Close checkout">&times;</button>
-      <span class="eyebrow">CHECKOUT</span><h2>Complete your order</h2>
-      <form id="checkoutForm">
-        <div class="form-grid"><label>Full name<input type="text" name="name" required></label><label>Phone number<input type="tel" name="phone" required></label></div>
-        <label>Email address<input type="email" name="email" required></label>
-        <label>Delivery address<textarea name="address" rows="3" required></textarea></label>
-        <label>Order note <span>(optional)</span><textarea name="note" rows="2" placeholder="Cake message, delivery instructions, etc."></textarea></label>
-        <div class="checkout-summary"><span>Order total</span><strong id="checkoutTotal">₦0</strong></div>
-        <button class="btn btn-dark full" type="submit">Place order</button>
-      </form>
-    </div>
-  </div>
-
-  <div class="toast" id="toast" role="status"></div>
-  <script src="script.js"></script>
-</body>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="script.js"></script>
+  </body>
 </html>
